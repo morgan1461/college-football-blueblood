@@ -2,11 +2,13 @@ import { useState } from 'react';
 import BlueBloods from './components/BlueBloods';
 import ArbitrageFinder from './components/ArbitrageFinder';
 import BlueBloodCalculator from './components/BlueBloodCalculator';
+import SeasonPredictor from './components/SeasonPredictor';
 import './App.css';
 
 const TABS = [
   { id: 'bluebloods', label: 'Blue Bloods' },
   { id: 'calculator', label: 'Blue Blood Calculator' },
+  { id: 'predictor', label: 'Season Predictor' },
   { id: 'arbitrage', label: 'Arbitrage Finder' },
 ];
 
@@ -32,6 +34,7 @@ function App() {
       <main className="content">
         {activeTab === 'bluebloods' && <BlueBloods />}
         {activeTab === 'calculator' && <BlueBloodCalculator />}
+        {activeTab === 'predictor' && <SeasonPredictor />}
         {activeTab === 'arbitrage' && <ArbitrageFinder />}
       </main>
     </div>
