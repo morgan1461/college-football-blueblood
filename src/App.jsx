@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import BlueBloods from './components/BlueBloods';
 import ArbitrageFinder from './components/ArbitrageFinder';
+import BlueBloodCalculator from './components/BlueBloodCalculator';
 import './App.css';
 
 const TABS = [
   { id: 'bluebloods', label: 'Blue Bloods' },
+  { id: 'calculator', label: 'Blue Blood Calculator' },
   { id: 'arbitrage', label: 'Arbitrage Finder' },
 ];
 
@@ -14,7 +16,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>🏈 College Football Dashboard</h1>
+        <h1>🏈 Sports Dashboard</h1>
       </header>
       <nav className="tabs">
         {TABS.map((tab) => (
@@ -29,6 +31,7 @@ function App() {
       </nav>
       <main className="content">
         {activeTab === 'bluebloods' && <BlueBloods />}
+        {activeTab === 'calculator' && <BlueBloodCalculator />}
         {activeTab === 'arbitrage' && <ArbitrageFinder />}
       </main>
     </div>
